@@ -4,6 +4,12 @@ version: 2
 sources:
   - name: budget # A name for your group of source tables
     schema: out.c-CDT_Plan # IMPORTANT: Change this to your Keboola bucket ID
+
+    quoting:
+      database: true
+      schema: true
+      identifier: true
+      
     tables:
       - name: int_daily_plan # IMPORTANT: Change this to your table name
         columns:
