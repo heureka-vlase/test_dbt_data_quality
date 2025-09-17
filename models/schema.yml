@@ -1,1 +1,19 @@
+# models/schema.yml
+version: 2
 
+sources:
+  - name: budget # A name for your group of source tables
+    schema: out.c-CDT_Plan # IMPORTANT: Change this to your Keboola bucket ID
+    tables:
+      - name: int_daily_plan # IMPORTANT: Change this to your table name
+        columns:
+          - name: model_name
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['week cycle', 'reality', 'classic', 'payday window']
+          - name: service_id
+            tests:
+              - not_null
+              - accepted_values:
+                  values: [1, 2, 101, 103, 106, 201, 202, 203, 204]
