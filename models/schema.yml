@@ -13,12 +13,12 @@ sources:
     tables:
       - name: int_daily_plan # IMPORTANT: Change this to your table name
         columns:
-          - name: model_name
+          - name: "model_name"
             tests:
               - not_null
               - accepted_values:
                   values: ['week cycle', 'reality', 'classic', 'payday window']
-          - name: service_id
+          - name: "service_id"
             tests:
               - not_null
               - accepted_values:
