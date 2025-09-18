@@ -9,3 +9,8 @@ profile: 'keboola'
 # Define where your models and tests are located
 model-paths: ["models"]
 test-paths: ["tests"]
+
+# Column names will be qouted
+sources:
+  keboola_quality_tests: # This must match the 'name' of your project above
+    +quote_columns: true
