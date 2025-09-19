@@ -11,12 +11,12 @@ sources:
       - name: int_daily_plan
         columns:
           - name: model_name
-            tests:
+            data_tests:
               - not_null
               - accepted_values:
                   values: ['week cycle', 'reality', 'classic', 'payday window']
           - name: service_id
-            tests:
+            data_tests:
               - not_null
               - accepted_values:
                   values: [1, 2, 101, 103, 106, 201, 202, 203, 204]
