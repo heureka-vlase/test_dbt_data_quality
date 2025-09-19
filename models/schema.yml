@@ -7,7 +7,6 @@ sources:
       database: true
       schema: true
       identifier: true
-      snowflake_ignore_case: true
     tables:
       - name: int_daily_plan
         columns:
