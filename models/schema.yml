@@ -3,12 +3,12 @@ version: 2
 sources:
   - name: budget
     schema: out.c-CDT_Plan
-    quoting:
-      database: true
-      schema: true
-      identifier: true
     tables:
       - name: int_daily_plan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
         columns:
           - name: model_name
             data_tests:
