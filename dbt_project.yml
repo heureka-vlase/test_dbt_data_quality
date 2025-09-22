@@ -1,16 +1,12 @@
-# dbt_project.yml
 name: 'keboola_quality_tests'
 version: '1.0.0'
 config-version: 2
 
-# This profile is provided automatically by the Keboola environment
 profile: 'keboola'
 
-# Define where your models and tests are located
 model-paths: ["models"]
 test-paths: ["tests"]
 
-# Column names will be quoted
 sources:
   keboola_quality_tests:
     +quote_columns: true
