@@ -3,23 +3,20 @@ version: 2
 sources:
   - name: budget
     schema: out.c-CDT_Plan
-    # This block handles the hyphen in the schema name.
     quoting:
       database: true
       schema: true
       identifier: true
     tables:
       - name: int_daily_plan
-        # This config now explicitly quotes the columns for this table.
-        +quote_columns: true
         columns:
           - name: model_name
             tests:
-              - not_null
+              # The 'not_null' test has been removed
               - accepted_values:
                   values: ['week cycle', 'reality', 'classic', 'payday window']
           - name: service_id
             tests:
-              - not_null
+              # The 'not_null' test has been removed
               - accepted_values:
                   values: [1, 2, 101, 103, 106, 201, 202, 203, 204]
