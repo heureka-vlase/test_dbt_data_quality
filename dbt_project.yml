@@ -6,7 +6,3 @@ profile: 'keboola'
 
 model-paths: ["models"]
 test-paths: ["tests"]
-
-sources:
-  keboola_quality_tests:
-    +quote_columns: true
