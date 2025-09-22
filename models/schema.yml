@@ -3,7 +3,11 @@ version: 2
 sources:
   - name: budget
     schema: out.c-CDT_Plan
-    # The specific 'quoting:' block has been removed from here.
+    # This block is back to handle the hyphen in the schema name
+    quoting:
+      database: true
+      schema: true
+      identifier: true
     tables:
       - name: int_daily_plan
         columns:
