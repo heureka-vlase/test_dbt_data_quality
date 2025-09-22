@@ -3,20 +3,17 @@ version: 2
 sources:
   - name: budget
     schema: out.c-CDT_Plan
+    # The specific 'quoting:' block has been removed from here.
     tables:
       - name: int_daily_plan
-        quoting:
-          database: true
-          schema: true
-          identifier: true
         columns:
           - name: model_name
-            data_tests:
+            tests:
               - not_null
               - accepted_values:
                   values: ['week cycle', 'reality', 'classic', 'payday window']
           - name: service_id
-            data_tests:
+            tests:
               - not_null
               - accepted_values:
                   values: [1, 2, 101, 103, 106, 201, 202, 203, 204]
